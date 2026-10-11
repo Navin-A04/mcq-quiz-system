@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCQ Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>MSEC Quiz</h1>
+  <button id="logout" class="ghost" hidden>Log out</button>
+</header>
+<main>
+  <section id="auth" hidden>
+    <h2>Log in to take a quiz</h2>
+    <form id="authForm">
+      <input id="name" placeholder="Full name" hidden>
+      <input id="email" type="email" placeholder="Email" required>
+      <input id="password" type="password" placeholder="Password" required minlength="6">
+      <p id="authErr" class="err"></p>
+      <button id="authBtn">Login</button>
+      <button type="button" id="toggle" class="ghost">New here? Register</button>
+    </form>
+  </section>
+
+  <section id="quizzes" hidden>
+    <h2>Choose a quiz</h2>
+    <div id="quizList" class="list"></div>
+    <h3>Your recent results</h3>
+    <table><thead><tr><th>Quiz</th><th>Score</th><th>Date</th></tr></thead><tbody id="history"></tbody></table>
+  </section>
+
+  <section id="quiz" hidden>
+    <div class="bar"><span id="progress"></span><span id="timer" role="timer">0:00</span></div>
+    <div id="question"></div>
+    <div class="nav">
+      <button id="prev" class="ghost">Previous</button>
+      <button id="next">Next</button>
+      <button id="submit">Submit quiz</button>
+    </div>
+  </section>
+
+  <section id="result" hidden>
+    <h2>Your result</h2>
+    <p id="score" class="big"></p>
+    <p id="feedback"></p>
+    <div id="review"></div>
+    <button id="home">Back to quizzes</button>
+  </section>
+</main>
+<dialog id="welcome">
+  <h2 id="welcomeTitle">Welcome to MSEC Quiz</h2>
+  <p>Before you begin:</p>
+  <ul>
+    <li>Each quiz has a countdown timer and submits automatically when time runs out.</li>
+    <li>You can move between questions before you submit.</li>
+    <li>Your score and answer review appear right after you submit.</li>
+  </ul>
+  <button id="welcomeClose">Got it</button>
+</dialog>
+<script src="app.js"></script>
+</body>
+</html>

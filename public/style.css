@@ -1,0 +1,31 @@
+:root{--bg:#fff8e1;--ink:#1b1f3b;--blue:#1a3cc8;--maroon:#8b1a1a;--card:#fff;--line:#e6d9a8;--ok:#1b7f3b;--bad:#b3261e}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,'Times New Roman',serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;background:var(--blue);color:#fff}
+header h1{margin:0;font-size:1.3rem}
+main{max-width:720px;margin:24px auto;padding:0 16px}
+h2{color:var(--maroon);margin-top:0}
+form{display:grid;gap:10px;max-width:360px}
+input:not([type=radio]){padding:10px;border:1px solid var(--line);border-radius:6px;font:inherit;background:#fff}
+button{padding:10px 18px;border:0;border-radius:6px;background:var(--blue);color:#fff;font:inherit;cursor:pointer}
+button.ghost{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+header .ghost{color:#fff;border-color:#fff}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,input:focus-visible{outline:3px solid var(--maroon);outline-offset:2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:12px}
+.card h3{margin:0 0 4px}
+.bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+#timer{font:700 2rem/1 'Courier New',monospace;color:var(--blue)}
+#timer.low{color:var(--bad)}
+.opt{display:block;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px;margin:8px 0;cursor:pointer}
+.opt:has(input:checked){border-color:var(--blue);background:#eef1ff}
+.nav{display:flex;gap:10px;margin-top:16px}
+.big{font-size:3rem;margin:0;color:var(--blue)}
+.rev{padding:8px 12px;margin:6px 0;border-left:4px solid;background:#fff}
+.rev.ok{border-color:var(--ok)}.rev.bad{border-color:var(--bad)}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line)}
+.err{color:var(--bad);margin:0;min-height:1.2em}
+@media(max-width:480px){#timer{font-size:1.5rem}}
+dialog{border:2px solid var(--blue);border-radius:10px;padding:24px;max-width:420px;background:#fff;color:var(--ink)}
+dialog::backdrop{background:rgba(27,31,59,.55)}
